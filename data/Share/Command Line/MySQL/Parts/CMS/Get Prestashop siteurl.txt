@@ -1,0 +1,1 @@
+mysql -h${host-localhost} -p"$pw" -u$usr $db -BNe "select domain from ${pre}shop_url;"

@@ -1,0 +1,1 @@
+shopt -s nullglob; for file in /home/{,xfer/,*/xfer/}*.tar.gz; do tar tf $file '*/va/' |awk -F/ -v d="$(awk -F': ' '{printf $1"|"}END{printf "xzzy"}' /etc/userdatadomains)" '$3~d{print $3}' ; done

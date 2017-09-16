@@ -1,0 +1,1 @@
+mysql -p"$pw" -u$usr $db

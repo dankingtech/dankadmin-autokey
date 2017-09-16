@@ -1,0 +1,1 @@
+tail -5000 /usr/local/apache/logs/error_log |grep ModSec|tail -5

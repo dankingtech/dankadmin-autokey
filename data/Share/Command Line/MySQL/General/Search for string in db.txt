@@ -1,0 +1,1 @@
+needle='test'; for table in $(mysql -p$pw -u$usr $db -e "show tables;"|grep -v Tables_in); do echo -e "\n\nTable $table"; for field in $(mysql -p$pw -u$usr $db -e "describe $table;"|awk '$1 !~ /Field/{print $1}'); do echo -e "\t$field";mysql -p$pw -u$usr $db -e "select * from $table where $field like '%${needle}%'"; done ; done

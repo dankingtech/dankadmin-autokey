@@ -1,0 +1,1 @@
+fs(){ pid=$1;fd=$2;while [ -z "$pid" ] ;do read -ep "PID: " pid;done;while [ -z "$fd" ] ;do read -ep "FD: " fd;done;socket="$(ls -lah /proc/31995/fd/8|awk 'match($0,/socket:\[([0-9]+)\]/,a){print a[1]}')";if [ -z "$socket" ] ;then echo "No socket";else lsof -i |grep $socket;fi;}; fs

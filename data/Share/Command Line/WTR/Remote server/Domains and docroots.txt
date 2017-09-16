@@ -1,0 +1,1 @@
+grep -E 'DocumentRoot|ServerName'  /etc/apache2/* -R |awk '/ServerName/{d=$3}/DocumentRoot/{print d": "$3}'

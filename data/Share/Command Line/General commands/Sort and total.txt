@@ -1,0 +1,1 @@
+|sort|uniq -c|sort -n|awk '{l++;t=t+$1;print}END{printf "\n\tTotal: %d\t Entries: %d\n\n",t,l}'|tail -23

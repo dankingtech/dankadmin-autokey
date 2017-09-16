@@ -1,0 +1,1 @@
+mysql -p"$pw" -u$usr $db -e "select * from ${pre}core_config_data where path like '%base%url%';"

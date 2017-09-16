@@ -1,0 +1,1 @@
+cut -d: -f1 /etc/userdatadomains| while read domain; do echo -e "$(dig @ns +short $domain)\t $domain"; done

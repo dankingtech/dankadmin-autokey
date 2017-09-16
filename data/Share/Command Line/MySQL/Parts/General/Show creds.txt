@@ -1,0 +1,1 @@
+echo -e "\n== Database credentials from $config ==\nUSER: $usr\nDB: $db\nPW: $pw\nPREFIX: $pre\nHOST: ${host-localhost}"

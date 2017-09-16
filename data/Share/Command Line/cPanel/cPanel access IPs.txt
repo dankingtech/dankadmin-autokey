@@ -1,0 +1,1 @@
+cat /usr/local/cpanel/logs/access_log|awk '$3!~/-/&&$7~/post_login/&&$9~/^2/{print $1" "$3}'|sort|uniq -c|sort -n|awk '{l++;t=t+$1;print}END{printf "\n\tTotal: %d\t Entries: %d\n\n",t,l}'|tail -23

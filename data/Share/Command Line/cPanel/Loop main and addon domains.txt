@@ -1,0 +1,1 @@
+awk -F'(: |==)' '$4~/addon|main/{print $1}' /etc/userdatadomains|while read domain; do

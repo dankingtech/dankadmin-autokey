@@ -1,0 +1,1 @@
+for prt in $(mysqladmin processlist|awk '$4 ~ /[^ ]+_[^ ]+/ {split($6,a,":");print a[2]}'); do ps aux|grep "$(netstat -ntp|awk -v prt=$prt '$4 ~ ":"$prt && $7 ~ /php/ {split($7,a,"/");print a[1]}')"; done|sort -u

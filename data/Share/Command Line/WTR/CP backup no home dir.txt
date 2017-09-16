@@ -1,0 +1,1 @@
+log=/cp_backups.$(date --rfc-3339=date);for user in $(\ls /var/cpanel/users/); do echo "Starting backup for $user" >> $log; /scripts/pkgacct --skiphomedir $user && echo "Finished backup for $user" >> $log; done; echo "Completed backups. Logged to $log: "; cat $log

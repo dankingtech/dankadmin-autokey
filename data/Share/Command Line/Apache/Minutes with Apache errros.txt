@@ -1,0 +1,1 @@
+date="$(date -d'-1 day' '+%b %d')";echo "Mintues with hits per hour for $date"; cat /usr/local/apache/logs/error_log | LC_ALL=C awk -v date="$date" -F'[ :]' '$0~date{print $4":"$5}'|uniq|cut -d: -f1|uniq -c|awk 'BEGIN{l=61}{if($1<l){l=$1;lh=$2};h++;print}END{printf "Fewest minutes: %d at %s.\tTotal hours: %d\n",l,lh,h}'

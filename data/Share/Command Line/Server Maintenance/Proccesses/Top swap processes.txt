@@ -1,0 +1,1 @@
+for pid in $(grep --color VmSwap /proc/*/status |sort -nk2|cut -d/ -f3|tail -10);do ps $pid; done

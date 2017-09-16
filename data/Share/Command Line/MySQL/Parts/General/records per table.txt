@@ -1,0 +1,1 @@
+for table in $(mysql -p"$pw" -u$usr $db -BNe "show tables;" 2>/dev/null |grep -v Tables_in); do echo -n "$table: "; mysql -p"$pw" -u$usr $db -BNe "SELECT count(*) from $table;" 2>/dev/null; done

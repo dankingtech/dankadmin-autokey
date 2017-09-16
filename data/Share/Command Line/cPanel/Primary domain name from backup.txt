@@ -1,0 +1,1 @@
+for file in $(ls *.tar.gz); do tar -xOf $file */cp/* |awk -F= '/^DNS=/{print $2}'; done

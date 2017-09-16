@@ -1,0 +1,1 @@
+config='public_html/config/defines.inc.php'; cp -pv $config{,.bak.$(date --rfc-3339=date)}; sed -r 's/(PS_MODE_DEV_. *, *)false/\1true/' -i $config

@@ -1,0 +1,1 @@
+awk -v host=$(hostname) '/ServerName/{domain=$2}/DocumentRoot/&&match($0,"/home/([^/]+)/public_html(.*)",a){print domain" -> http://"host"/~"a[1]a[2]}' /usr/local/apache/conf/httpd.conf|sort -u

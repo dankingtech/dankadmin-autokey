@@ -1,0 +1,1 @@
+tcpdump -A -s 0 "src $(hostname -i) and (dst port 80 or dst port 443) and (((ip[2:2] - ((ip[0]&0xf)<<2)) - ((tcp[12]&0xf0)>>2)) != 0)"

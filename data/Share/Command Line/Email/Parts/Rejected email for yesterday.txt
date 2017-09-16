@@ -1,0 +1,1 @@
+cat /var/log/exim_mainlog |LC_ALL=C egrep "($(cat /var/log/exim_mainlog |LC_ALL=C awk -v date="$(date -d"-1 day" +%F)" '$1~date&&match($0,/<= <> R=([^ ]+)/,a){print a[1]}'|awk '{printf "%s|",$1}')done) <="

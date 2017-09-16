@@ -1,0 +1,1 @@
+sudo cat /var/log/maillog | grep FAILED | awk '{print $9}' | awk -F: '{print $4}' | cut -d] -f1 | sort -n | uniq -c | sort -n | tail -10

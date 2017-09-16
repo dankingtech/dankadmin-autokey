@@ -1,0 +1,1 @@
+echo -e "Username: $user\nPassword: $pass\nHostname: $host"; lftp -u "$user","$pass" $host -e 'set net:socket-buffer 4000000;set net:timeout 10;set net:max-retries 5;set net:limit-total-rate 40000000:0;set net:reconnect-interval-base 5; set net:reconnect-interval-max 2;set ftp:ssl-allow no;'

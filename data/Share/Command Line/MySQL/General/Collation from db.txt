@@ -1,0 +1,1 @@
+mysqlshow --status -p"$pw" -u$usr $db 2>/dev/null|awk '$29~/_/&&!x[$29]++{print $29}'

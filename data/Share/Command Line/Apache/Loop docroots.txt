@@ -1,0 +1,1 @@
+for docroot in $(awk '/DocumentRoot/&&$2~/home/{print $2}' /usr/local/apache/conf/httpd.conf);do

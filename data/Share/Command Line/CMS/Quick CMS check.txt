@@ -1,0 +1,1 @@
+for docroot in $(awk '/DocumentRoot/{print $2}' /usr/local/apache/conf/httpd.conf |grep home|sort -u); do i="${docroot}/index.php"; [ ! -f $i ] && continue; echo -en "\n$i: "; t="$(grep -Eom1 '(WordPress|Joomla|PrestaShop|MediaWiki|Drupal|Concrete5|Magento|Moodle|phpBB|Zen Cart)' $i)"; [ -n "$t" ] && echo $t || echo -e "\n$(head -3 $i)\n"; done

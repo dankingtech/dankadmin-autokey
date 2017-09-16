@@ -1,0 +1,1 @@
+cmd="echo -e \"GET $uri HTTP/1.1\nHost: $host\n\n\"| nc ${ip-$host} ${port-80}|grep -i '<title>'"; echo $cmd; eval "$cmd"

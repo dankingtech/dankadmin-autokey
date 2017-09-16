@@ -1,0 +1,1 @@
+zcat /var/log/exim_mainlog?*|cat /var/log/exim_mainlog -

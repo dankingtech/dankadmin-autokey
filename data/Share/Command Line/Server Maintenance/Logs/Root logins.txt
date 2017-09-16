@@ -1,0 +1,1 @@
+cat /var/log/secure*| awk 'match($0,/Accepted password for root from ([0-9.]+)/,a){print $1" "$2" "$3"\t"a[1]}'

@@ -1,0 +1,1 @@
+dmo(){ dr="$1"; config="${dr}config.php"; db=$(grep 'dbname ' $config|cut -d\' -f2); usr=$(grep 'dbuser' $config|cut -d\' -f2); pw=$(grep 'dbpass' $config|cut -d\' -f2); pre=$(grep 'prefix ' $config|cut -d\' -f2);}; dmo

@@ -1,0 +1,1 @@
+tail -f /usr/local/apache/logs/error_log /home/*/public_html/{,*/}error_log /usr/local/apache/domlogs/* /var/log/messages/* 2>/dev/null|grep 216.54.31.82

@@ -1,0 +1,1 @@
+cat /usr/local/apache/conf/httpd.conf |awk -v domain="domain.com" '$0~"Server(Name|Alias).* "domain{d=1}d&&/DocumentRoot/{print $2;exit}'

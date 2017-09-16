@@ -1,0 +1,1 @@
+HTTP_HOST="$host" REQUEST_URI="$uri" strace -Trf php $file 2>&1 >/dev/null | awk 'match($0,/sin_port=htons\(([^)]+)\), sin_addr=inet_addr\("([^"]+)"\)/,a){port=a[1];ip=a[2]}/(Timeout)/&&port&&ip{print "Timed out. Last connection to "ip" on port "port;exit}'

@@ -1,0 +1,31 @@
+{
+    "usageCount": 11, 
+    "omitTrigger": false, 
+    "prompt": false, 
+    "description": "Varnish Log connecting ip", 
+    "abbreviation": {
+        "wordChars": "[\\w]", 
+        "abbreviations": [
+            ".vgip"
+        ], 
+        "immediate": true, 
+        "ignoreCase": false, 
+        "backspace": true, 
+        "triggerInside": false
+    }, 
+    "hotkey": {
+        "hotKey": null, 
+        "modifiers": []
+    }, 
+    "modes": [
+        1
+    ], 
+    "showInTrayMenu": false, 
+    "matchCase": false, 
+    "filter": {
+        "regex": null, 
+        "isRecursive": false
+    }, 
+    "type": "phrase", 
+    "sendMode": "kb"
+}

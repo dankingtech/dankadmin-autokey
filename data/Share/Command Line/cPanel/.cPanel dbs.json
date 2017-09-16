@@ -1,0 +1,31 @@
+{
+    "usageCount": 1, 
+    "omitTrigger": false, 
+    "prompt": false, 
+    "description": "cPanel dbs", 
+    "abbreviation": {
+        "wordChars": "[\\w]", 
+        "abbreviations": [
+            ".cpdbs"
+        ], 
+        "immediate": false, 
+        "ignoreCase": false, 
+        "backspace": true, 
+        "triggerInside": false
+    }, 
+    "hotkey": {
+        "hotKey": null, 
+        "modifiers": []
+    }, 
+    "modes": [
+        1
+    ], 
+    "showInTrayMenu": false, 
+    "matchCase": false, 
+    "filter": {
+        "regex": null, 
+        "isRecursive": false
+    }, 
+    "type": "phrase", 
+    "sendMode": "kb"
+}

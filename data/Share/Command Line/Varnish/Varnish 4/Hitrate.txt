@@ -1,0 +1,1 @@
+watch -n.5 "varnishstat -f MAIN.client_req -f MAIN.cache_hit -1 | awk 'req{print \"Hitrate:\t\"\$2/req;exit}{req=\$2}'"

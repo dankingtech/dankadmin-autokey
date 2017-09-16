@@ -1,0 +1,1 @@
+mysqladmin pr |awk '$10~/Sleep/&&match($6,/localhost(:[0-9]+)/,s){print s[1]}' |while read socket; do pid=$(lsof -nPi $socket|awk '$9~/3306$/{print $2}'); echo "$pid"; done

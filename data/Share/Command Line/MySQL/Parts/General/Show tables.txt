@@ -1,0 +1,1 @@
+mysql -h${host-localhost} -p$pw -u$usr $db -e "show tables like '${pre}%';"

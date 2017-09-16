@@ -1,0 +1,31 @@
+{
+    "usageCount": 69, 
+    "omitTrigger": false, 
+    "prompt": false, 
+    "description": "Comment common .htaccess items", 
+    "abbreviation": {
+        "wordChars": "[\\w]", 
+        "abbreviations": [
+            ".cht"
+        ], 
+        "immediate": false, 
+        "ignoreCase": false, 
+        "backspace": true, 
+        "triggerInside": false
+    }, 
+    "hotkey": {
+        "hotKey": null, 
+        "modifiers": []
+    }, 
+    "modes": [
+        1
+    ], 
+    "showInTrayMenu": false, 
+    "matchCase": false, 
+    "filter": {
+        "regex": null, 
+        "isRecursive": false
+    }, 
+    "type": "phrase", 
+    "sendMode": "kb"
+}

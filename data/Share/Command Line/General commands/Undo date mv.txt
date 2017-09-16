@@ -1,0 +1,1 @@
+!mv:gs/{,.bak.$(date +%F)}/{.bak.$(date +%F),}/

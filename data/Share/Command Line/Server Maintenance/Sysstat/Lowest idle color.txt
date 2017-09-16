@@ -1,0 +1,1 @@
+sar -u|awk -v t="30" 'BEGIN{n="\033[0m";c="\033[1;31m";w="\033[1;33m"}$9~/[0-9]/{us=$4+$6;io=$7;id=$9;if (us>io){ioc=n;if (us>t){usc=c}else{usc=w}}else{usc=n;if (io>t){ioc=c}else{ioc=w}}printf "%s\tUser/System: %s%4.2f%s\tI/O: %s%4.2f%s\tIdle: %4.2f\n",$1" "$2,usc,us,n,ioc,io,n,id}'

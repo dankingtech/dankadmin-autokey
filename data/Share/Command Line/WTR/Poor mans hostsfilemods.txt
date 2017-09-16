@@ -1,0 +1,1 @@
+awk -F': |==|:' '$4~/addon|main/&&!/-primary/{print $7,$1,"www."$1}' /etc/userdatadomains

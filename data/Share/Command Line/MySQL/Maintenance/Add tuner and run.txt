@@ -1,0 +1,1 @@
+cd /root/ && wget --no-check-certificate https://raw.github.com/major/MySQLTuner-perl/master/mysqltuner.pl && chmod +x mysqltuner.pl && ./mysqltuner.pl

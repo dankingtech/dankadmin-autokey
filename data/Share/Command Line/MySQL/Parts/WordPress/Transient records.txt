@@ -1,0 +1,1 @@
+mysql -p"$pw" -u$usr $db -e "select option_name from ${pre}options where option_name like '%transient%';" | cut -d_ -f1-3 |sort|uniq -c|sort -n|awk '{l++;t=t+$1;print}END{printf "\n\tTotal transient records: %d\t Types of transient records: %d\n\n",t,l}'|tail -13

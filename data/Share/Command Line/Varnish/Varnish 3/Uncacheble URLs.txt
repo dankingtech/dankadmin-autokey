@@ -1,0 +1,1 @@
+varnishlog -m TXHeader:"X-Cacheable: NO"|awk '/Host:/{h=$5}/..URL/{print h$4}'

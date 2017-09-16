@@ -1,0 +1,1 @@
+dm(){ dr="$1"; config="${dr}app/etc/local.xml"; db=$(awk 'match($0,/<dbname>.*CDATA\[([^]]+)/,a) {print a[1]}' $config); usr=$(awk 'match($0,/<username>.*CDATA\[([^]]+)/,a) {print a[1]}' $config); pw=$(awk 'match($0,/<password>.*\[CDATA\[(.+)\]\]/,a) {print a[1]}' $config); pre=$(awk 'match($0,/<table_prefix>.*CDATA\[([^]]+)/,a) {print a[1]}' $config);}; dm

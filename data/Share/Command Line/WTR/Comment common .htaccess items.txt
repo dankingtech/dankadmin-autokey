@@ -1,0 +1,1 @@
+search='^([^#]*(Add[HT].*php|php_(value|flag)|suPHP_ConfigPath).*)' ; find /home/ -name .htaccess -exec grep -HiE "$search" {} \; -exec sed -r "s/$search/#\1/gi" -i.bak.cht.$(date +%F) {} +

@@ -1,0 +1,1 @@
+cat /etc/*-release|awk '/release/&&!x[$0]++'

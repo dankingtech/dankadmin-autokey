@@ -1,0 +1,1 @@
+paste <(sar) <(sar -r) <(sar -q)|awk 'NR%20==21{print "\nTime      \t %user %system %iowait %idle - kbmemfree %memused %commit - load1 load5 load10"}NR>3{printf "%s %s\t% 5.2f % 8.2f % 7.2f %5.2f - % 9d % 8.2f % 7.2f - % 5.2f % 5.2f % 6.2f\n",$1,$2,$4,$6,$7,$9,$12,$14,$18,$23,$24,$25}'|sort -nk6r

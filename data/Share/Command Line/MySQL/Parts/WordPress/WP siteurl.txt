@@ -1,0 +1,1 @@
+-e "select option_value from wp_options where option_name='siteurl';"

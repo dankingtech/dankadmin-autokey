@@ -1,0 +1,1 @@
+varnishlog -i BeReqURL -q 'Storage ~ "s0"'|awk '/BereqURL/{print x[$3]++,$3}'

@@ -1,0 +1,1 @@
+for docroot in $(awk '/DocumentRoot/{print $2}' /usr/local/apache/conf/httpd.conf |grep home|sort -u); do file="${docroot}/.htaccess"; [ -e "$file" ] && cp -pv $file{,.bak.$(date +%F)};  echo -e "ErrorDocument 403 \"Forbidden\"\n#Deny XML-RPC requests\n<Files xmlrpc.php>\n  order deny,allow\n  deny from all\n</Files>\n$(sed 's@\\@\\\\@' $file)" > $file; done

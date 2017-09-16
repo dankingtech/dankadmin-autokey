@@ -1,0 +1,1 @@
+find /home/$user/ -name .htaccess -exec sed 's@^\(AddHandler.*php5[0-9].*\)@#\1@' -i {} \;

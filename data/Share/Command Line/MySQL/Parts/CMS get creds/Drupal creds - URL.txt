@@ -1,0 +1,1 @@
+ddr(){ dr="$1"; config="${dr}sites/default/settings.php"; eval $(awk '/^\$db_url/ {match($0,"\\$db_url *= *.mysql://([a-z0-9_]*):(.*)@localhost/(.*)..$",a); print "db="a[3]"; usr="a[1]"; pw="a[2]}' $config); }; ddr 

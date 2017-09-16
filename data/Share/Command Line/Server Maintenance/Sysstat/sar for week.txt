@@ -1,0 +1,1 @@
+opts='-u'; (sar $opts; for d in {1..7} ; do sar $opts -f /var/log/sa/sa$(date -d"-$d day" +%d);done)

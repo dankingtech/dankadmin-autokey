@@ -1,0 +1,1 @@
+mysql -p$pw -u$usr $db -BNe "select option_value from ${pre}options where option_name='siteurl' or option_name='home';" 2>/dev/null;read -p "New URL: " url&& mysql -p$pw -u$usr $db -BNe "update ${pre}options set option_name='${url}' where option_name='siteurl' or option_name='home';" 2>/dev/null

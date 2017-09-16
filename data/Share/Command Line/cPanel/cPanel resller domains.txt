@@ -1,0 +1,1 @@
+read -p "owner: " owner; for user in $(children $owner); do for domain in $(grep ^DNS= /var/cpanel/users/$user| cut -d= -f2); do echo $domain; done; done

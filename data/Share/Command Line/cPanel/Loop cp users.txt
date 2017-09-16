@@ -1,0 +1,1 @@
+awk -F': ' 'NF==2{print $1}' /etc/trueuserowners | while read user; do

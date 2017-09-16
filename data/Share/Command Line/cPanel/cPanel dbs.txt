@@ -1,0 +1,1 @@
+mysql -BNe 'show databases;' | grep -E "($(echo "$(\ls /var/cpanel/users/ |awk --re-interval 'match($0,"([a-z0-9]{1,8})",a){printf "%s|",a[1]}';)xzzy)_")"

@@ -1,0 +1,1 @@
+echo -e "\nCurrent Directory: $(pwd)\nUsername: $user\nPassword: $pass\nHostname: $host"; wget --ftp-user=${user} --ftp-password=${pass} -m --retry-connrefuse --limit-rate=50000 -nH --cut-dirs=1 ftp://${host}/public_html/

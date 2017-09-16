@@ -1,0 +1,1 @@
+sar -u|sort -nrk9|awk '$9~/[0-9]/{printf "%s\tUser/System: %4.2f\tI/O: %4.2f\tIdle: %4.2f\n",$1" "$2,$4+$6,$7,$9}'|tail -10

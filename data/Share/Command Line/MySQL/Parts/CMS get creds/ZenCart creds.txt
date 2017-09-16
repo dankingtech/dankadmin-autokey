@@ -1,0 +1,1 @@
+dz(){ dr="$1"; config="${dr}includes/configure.php"; db=$(grep 'DB_DATABASE' $config|cut -d\' -f4); usr=$(grep 'DB_SERVER_USERNAME' $config|cut -d\' -f4); pw=$(grep 'DB_SERVER_PASSWORD' $config|cut -d\' -f4); pre=$(grep 'DB_PREFIX' $config|cut -d\' -f4);}; dz

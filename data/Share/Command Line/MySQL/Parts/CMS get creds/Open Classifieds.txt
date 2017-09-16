@@ -1,0 +1,1 @@
+oc(){ dr="$1"; config="${dr}oc/config/database.php"; db=$(grep 'database' $config|cut -d\' -f4); usr=$(grep 'username' $config|cut -d\' -f4); pw=$(grep 'password' $config|cut -d\' -f4); pre=$(grep 'table_prefix' $config|cut -d\' -f4);}; oc

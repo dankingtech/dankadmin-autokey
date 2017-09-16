@@ -1,0 +1,1 @@
+find /home*/ -name .htaccess -exec grep -Ei '^([^#]*suPHP_ConfigPath.*)' {} \; -exec sed -r 's/^([^#]*suPHP_ConfigPath.*)/#\1/g' -i.bak.$(date +%F) {} +

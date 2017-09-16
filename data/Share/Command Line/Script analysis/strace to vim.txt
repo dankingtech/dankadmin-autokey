@@ -1,0 +1,1 @@
+HTTP_HOST="$host" REQUEST_URI="$uri" time strace -s65535 -Trf php $file 2>&1 | vim -Rmn -

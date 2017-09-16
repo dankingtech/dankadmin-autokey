@@ -1,0 +1,1 @@
+for domain in $(cat /var/log/exim_mainlog |awk '$4~/==/&&$0!~/root/&&$0~/Connection timed out/&&match($5,/[^@]+@([^ ]+)/,a){print a[1]}' |sort -u); do [ -z "$(dig +short $domain mx)" ] && echo $domain; done

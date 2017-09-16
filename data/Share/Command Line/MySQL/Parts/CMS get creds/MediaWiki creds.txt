@@ -1,0 +1,1 @@
+dmw(){ dr="$1"; config="${dr}LocalSettings.php"; db=$(grep '$wgDBname' $config|cut -d\" -f2); usr=$(grep '$wgDBuser' $config|cut -d\" -f2); pw=$(grep '$wgDBpassword' $config|cut -d\" -f2); pre=$(grep '$wgDBprefix' $config|cut -d\" -f2);}; dmw

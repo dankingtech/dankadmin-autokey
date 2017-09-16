@@ -1,0 +1,1 @@
+mysql -h${host-localhost} -p$pw -u$usr $db -BNe "select option_value from ${pre}options where option_name='siteurl';" 2>/dev/null

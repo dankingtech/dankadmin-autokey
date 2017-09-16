@@ -1,0 +1,1 @@
+mysqldump --single-transaction --no-data --no-create-info --routines --skip-triggers

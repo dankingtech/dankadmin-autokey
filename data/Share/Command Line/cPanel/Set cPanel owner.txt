@@ -1,0 +1,1 @@
+sed "s/^OWN.*/OWNER=$owner/" -i /var/cpanel/users/*; /scripts/updateuserdomains ; /scripts/dnscluster syncall

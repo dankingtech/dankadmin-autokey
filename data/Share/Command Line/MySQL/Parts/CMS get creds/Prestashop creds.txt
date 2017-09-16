@@ -1,0 +1,1 @@
+dp(){ dr="$1"; config="${dr}config/settings.inc.php"; db=$(grep "_DB_NAME_" $config|cut -d\' -f4); usr=$(grep "_DB_USER_" $config|cut -d\' -f4); pw=$(grep "_DB_PASSWD_" $config|cut -d\' -f4); pre=$(grep "_DB_PREFIX_" $config|cut -d\' -f4);}; dp

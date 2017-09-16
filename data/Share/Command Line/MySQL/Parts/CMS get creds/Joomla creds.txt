@@ -1,0 +1,1 @@
+dj(){ dr="$1"; config="${dr}configuration.php"; db=$(grep '$db ' $config|cut -d\' -f2); usr=$(grep '$user' $config|cut -d\' -f2); pw=$(grep '$password' $config|cut -d\' -f2); pre=$(grep '$dbprefix ' $config|cut -d\' -f2);}; dj

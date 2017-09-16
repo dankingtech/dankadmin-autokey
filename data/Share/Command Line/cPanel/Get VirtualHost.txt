@@ -1,0 +1,1 @@
+cat /usr/local/apache/conf/httpd.conf | LC_ALL=C grep -i3 [\ ]

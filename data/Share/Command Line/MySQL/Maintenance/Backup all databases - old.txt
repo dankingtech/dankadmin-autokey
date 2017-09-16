@@ -1,0 +1,1 @@
+mkdir -v /root/dbbackups.$(date --rfc-3339=date); touch /root/dbbackups.$(date --rfc-3339=date)/list; for db in `mysql -e 'show databases' | grep -v Database | awk '{print $1}'` ; do mysqldump --add-drop-table $db > /root/dbbackups.$(date --rfc-3339=date)/$db.sql && echo $db >> list ; done

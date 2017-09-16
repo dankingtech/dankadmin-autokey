@@ -1,0 +1,1 @@
+HTTP_HOST="$host" REQUEST_URI="$uri" time strace -Trf php $file

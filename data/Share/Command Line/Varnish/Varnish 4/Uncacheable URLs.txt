@@ -1,0 +1,1 @@
+varnishlog -c -i ReqURL -i End -I "ReqHeader:X-Cacheable: NO:" -I "ReqHeader:Host:"|awk '/<< Request/{url="";host="";cacheable="";r=1}$2~/ReqURL/{url=$3}$3~/Host/{host=$4}match($0,/X-Cacheable: NO:(.*)$/,c){cacheable=c[1]}$2~/End/&&cacheable{printf "%s\t%s%s\n",cacheable,host,url}'

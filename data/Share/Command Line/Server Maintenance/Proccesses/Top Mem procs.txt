@@ -1,0 +1,1 @@
+ps -eo %mem,cmd |awk '{c[$2" "$3]+=$1}END{for (x in c) {printf "%6.2f\t%s\n",c[x],x}}'|sort -nr|head

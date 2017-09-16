@@ -1,0 +1,1 @@
+for docroot in $(awk '/DocumentRoot/{print $2}' /usr/local/apache/conf/httpd.conf |grep home|sort -u);do grep -Eom1 '(WordPress|Joomla|PrestaShop|MediaWiki|Drupal|Concrete5|Magento|Moodle|phpBB|Zen Cart)' ${docroot}/index.php 2>/dev/null; done|sort|uniq -c|sort -n

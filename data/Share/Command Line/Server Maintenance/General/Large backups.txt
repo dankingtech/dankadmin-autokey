@@ -1,0 +1,1 @@
+find /home/ -type f -size +5G -regex '.*back.*' -exec ls -lh {} \; | awk '{ print $5 "\t" $9 }'|sort -n|tail -10

@@ -1,0 +1,1 @@
+/opt/MegaRAID/MegaCli/MegaCli64 -PDList -aALL|awk '/Size|Inquiry|Media/{print "  "$0}/Slot Number/'

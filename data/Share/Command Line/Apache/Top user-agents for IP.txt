@@ -1,0 +1,1 @@
+LC_ALL=C grep 157.55.32.184 /usr/local/apache/domlogs/*|awk -F'"' '{print $6}'|sort|uniq -c|sort -n|tail -10

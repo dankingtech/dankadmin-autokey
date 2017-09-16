@@ -1,0 +1,1 @@
+mysql -e "select table_schema, table_name, engine from information_schema.tables where engine = 'innodb';" | awk '{print $1}' | grep -v "^table_schema$" | sort | uniq

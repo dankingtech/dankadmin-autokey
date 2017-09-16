@@ -1,0 +1,1 @@
+sed -nr 's/^([^#]*(slow|long).*)$/#\1/p' /etc/my.cnf; sed -r 's/^([^#]*(slow|long).*)$/#\1/' -i /etc/my.cnf && service mysql restart

@@ -1,0 +1,1 @@
+/opt/dedrads/mysql/slowqueryparser.py /var/log/slowqueries|egrep -v 'root|logaholic|exim|modsec'

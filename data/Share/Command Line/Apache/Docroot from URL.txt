@@ -1,0 +1,1 @@
+cat /usr/local/apache/conf/httpd.conf |awk -v url="http://example.domain.com/test" 'BEGIN{match(url,"(http://)?([^/]+)(.*)$",a);domain=a[2];file=a[3]}$0~"Server(Name|Alias).* "domain{d=1}d&&/DocumentRoot/{print $2""file;exit}'

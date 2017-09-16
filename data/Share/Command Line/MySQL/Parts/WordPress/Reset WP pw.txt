@@ -1,0 +1,1 @@
+PS3="Enter number of username: "; select login in $(mysql -p$pw -u$usr $db -e "SELECT user_login from ${pre}users;"|grep -v user_login); do [ -n "$login" ] && break; done; echo "User: $login"; read -ep "Password: " newpw; mysql -p"$pw" -u$usr $db -e "UPDATE ${pre}users SET user_pass = MD5('$newpw') WHERE user_login = '$login';"

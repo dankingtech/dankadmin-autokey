@@ -1,0 +1,1 @@
+PS3="Number of user: "; select user in $(\ls /var/cpanel/users); do [ -n "$user" ] && break; done

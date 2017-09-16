@@ -1,0 +1,1 @@
+dwh(){ dr="$1"; config="${dr}configuration.php"; db=$(grep '$db_name ' $config|cut -d\' -f2); usr=$(grep '$db_username' $config|cut -d\' -f2); pw=$(grep '$db_password' $config|cut -d\' -f2); pre='';}; dwh

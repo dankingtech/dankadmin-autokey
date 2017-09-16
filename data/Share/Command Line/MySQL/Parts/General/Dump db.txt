@@ -1,0 +1,1 @@
+mysqldump -Q --add-drop-table --routines --net_buffer_length=5M -h${host-localhost} -p"$pw" -u$usr $db > $db.$(date +%F).sql

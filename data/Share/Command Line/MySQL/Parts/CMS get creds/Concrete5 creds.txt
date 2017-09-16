@@ -1,0 +1,1 @@
+dc(){ dr="$1"; config="${dr}config/site.php"; db=$(grep "DB_DATABASE" $config|cut -d\' -f4); usr=$(grep "DB_USERNAME" $config|cut -d\' -f4); pw=$(grep "DB_PASSWORD" $config|cut -d\' -f4); pre='';}; dc

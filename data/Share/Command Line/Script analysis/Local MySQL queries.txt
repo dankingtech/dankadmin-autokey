@@ -1,0 +1,1 @@
+HTTP_HOST="$host" REQUEST_URI="$uri" strace -s65535 -Trf php $file 2>&1 |awk 'BEGIN{fd="xxx"}/mysql.sock/&&match($0,/connect\(([0-9]+)/,a){fd=a[1]}match($0,"write\\("fd", \"(.*)(\\\\[0-9]+)+([^\"]+)",a){print a[3]}'|head -50

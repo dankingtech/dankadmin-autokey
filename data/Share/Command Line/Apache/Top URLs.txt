@@ -1,0 +1,1 @@
+find /usr/local/apache/domlogs/ -type f ! -name "*_log*" -exec awk -v file="{}" 'BEGIN{match(file,"([^/]+)$",d)}match($7,/^([^?#]+)/,a){print d[1]""a[1]}' {} \; |sort|uniq -c|sort -n|awk '{l++;t=t+$1;print}END{printf "\n\tTotal Requests: %d\t Total URLs: %d\n\n",t,l}'|tail -23

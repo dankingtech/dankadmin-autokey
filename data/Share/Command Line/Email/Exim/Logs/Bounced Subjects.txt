@@ -1,0 +1,1 @@
+awk -v ids="$(cat /var/log/exim_mainlog |LC_ALL=C awk '$5~/\*\*/{printf $4"|"}')xzzy" '$4~ids&&$5~/<=/&&match($0,/T="([^"]*)"/,a){print a[1]}' /var/log/exim_mainlog |sort|uniq -c|sort -n|awk '{l++;t=t+$1;print}END{printf "\n\tTotal bounced emails: %d\t Unique subjects: %d\n\n",t,l}'|tail -23

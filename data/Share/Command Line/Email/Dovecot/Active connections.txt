@@ -1,0 +1,1 @@
+read -ep "Active email connections for which user? " user; ps aux |awk -v user=$user -F/ '$0~user&&$6~/^(imap|pop)/{print $11"@"$10}'|sort|uniq -c|sort -n|awk '{l++;t=t+$1;print}END{printf "\n\tTotal connections: %d\t Addresses: %d\n\n",t,l}'

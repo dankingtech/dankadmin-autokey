@@ -1,0 +1,1 @@
+sar -r|sort -nk5|tail -10;sar -q|sort -nk5|tail -10

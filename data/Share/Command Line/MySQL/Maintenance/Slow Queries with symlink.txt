@@ -1,0 +1,1 @@
+echo; read -p "username: " cpuser; echo "log-slow-queries = /var/log/slowqueries" >> /etc/my.cnf; echo "long_query_time = 3" >> /etc/my.cnf; touch /var/log/slowqueries; chown mysql:wheel /var/log/slowqueries; chmod 664 /var/log/slowqueries; usermod -a -G wheel $cpuser; ln -s /var/log/slowqueries /home/$cpuser/slowqueries && service mysql restart

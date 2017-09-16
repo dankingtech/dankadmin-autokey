@@ -1,0 +1,1 @@
+echo -en "\n\ncPanel:\t" ; /usr/local/cpanel/cpanel -V; php -v|awk 'NR==1{print "PHP:\t"$2}'; mysql -V|awk -F'[ ,]' '{print "MySQL:\t"$6}';httpd -V|awk -F'[/ ]' '$3~/Apache/{print "Apache:\t"$4}'

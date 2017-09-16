@@ -1,0 +1,1 @@
+varnishlog -c -m ReqStart:

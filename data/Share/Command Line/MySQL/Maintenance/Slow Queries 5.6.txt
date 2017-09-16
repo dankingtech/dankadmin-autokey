@@ -1,0 +1,1 @@
+echo; echo -e 'slow_query_log=1\nlong_query_time=3\nslow_query_log_file="/var/log/slowqueries"' >> /etc/my.cnf;  touch /var/log/slowqueries; chown mysql /var/log/slowqueries; service mysql restart

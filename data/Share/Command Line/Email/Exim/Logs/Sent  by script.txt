@@ -1,0 +1,1 @@
+cat /var/log/exim_mainlog| LC_ALL=C grep -i .|grep cwd|awk -F'=' '{print $2}'|cut -d' ' -f1|sort|uniq -c|sort -n|tail -20

@@ -1,0 +1,1 @@
+find /home/ -name '*.php' -exec grep -Pq "\r" {} \; -exec grep -Pvq "\r" {} \; -print

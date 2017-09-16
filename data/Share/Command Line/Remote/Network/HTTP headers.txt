@@ -1,0 +1,1 @@
+tcpdump -A -s 8000 '(port 80 or port 443) and (((ip[2:2] - ((ip[0]&0xf)<<2)) - ((tcp[12]&0xf0)>>2)) != 0)' | awk --re-interval 'match($0,/^.{8}((GET |HTTP\/|POST |HEAD ).*)/,a){print "\n"a[1];h=2}$0~/^.{0,1}$/&&h{h--}h&&/^[A-Za-z0-9-]+: /{print}'

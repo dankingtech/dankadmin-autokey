@@ -1,0 +1,1 @@
+dsmf(){  dr="$1"; config="${dr}/Settings.php"; db="$(grep '^$db_name' $config|cut -d\' -f2)";usr="$(grep '^$db_user' $config|cut -d\' -f2)";pw="$(grep '^$db_passwd' $config|cut -d\' -f2)";pre="$(grep '^$db_prefix' $config|cut -d\' -f2)";}; dsmf

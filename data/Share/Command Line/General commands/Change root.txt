@@ -1,0 +1,1 @@
+cp -vip /etc/shadow{,.bak.$(date --rfc-3339=date)};passwd

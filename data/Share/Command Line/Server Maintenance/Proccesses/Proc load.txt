@@ -1,0 +1,1 @@
+ps aux |awk '$4 > 0.0 {a[$11" "$12]=a[$11" "$12]+$4}END{for (x in a) {printf "%5.2f %s\n",a[x],x}}'|sort -n |awk '{t=t+$1;print}END{printf "\n\tTotal: %d\n\n",t}' |tail -20

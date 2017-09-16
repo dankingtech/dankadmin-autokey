@@ -1,0 +1,1 @@
+ps aux|awk "\$1 ~ /$(for u in $(\ls /var/cpanel/users/); do echo -n "$u|"; done)?/ "'&&'" \$8 ~ /[DZX]/ "'&&'" \$4 > 0.0 {print}"|sort -nrk 3

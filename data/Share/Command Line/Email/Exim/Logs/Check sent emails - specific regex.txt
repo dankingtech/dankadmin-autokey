@@ -1,0 +1,1 @@
+cat /var/log/exim_mainlog| awk 'match ($0,/<= ([^@<>]+(@|\+)[^ ]+)/,a) {print a[1]}' |sort|uniq -c|sort -n|tail -20

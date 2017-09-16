@@ -1,0 +1,1 @@
+netstat -an|awk '/ESTABLISHED|CONNECTED/&&/:3306|mysql/{c++}END{print "Currently: "c}'; awk -F= '$1~/max_connections/{print "Allowed: "$2}' /etc/my.cnf

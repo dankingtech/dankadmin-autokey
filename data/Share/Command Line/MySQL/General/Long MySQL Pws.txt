@@ -1,0 +1,1 @@
+mysql -BNe "SELECT User FROM mysql.user WHERE LENGTH(Password)<41;" | sort | uniq

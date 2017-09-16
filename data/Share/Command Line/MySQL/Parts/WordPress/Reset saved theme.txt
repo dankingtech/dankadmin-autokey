@@ -1,0 +1,1 @@
+mysql -p$pw -u$usr $db -e "UPDATE ${pre}options SET option_value = '$template' WHERE option_name = 'template';UPDATE ${pre}options SET option_value = '$style' WHERE option_name = 'stylesheet';UPDATE ${pre}options SET option_value = '$theme' WHERE option_name = 'current_theme';"
