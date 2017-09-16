@@ -1,0 +1,4 @@
+# dankadmin-autokey
+Public portion of my personal Autokey scripts and phrases. These are primarily commands suited for systems administration work.
+
+The Autokey tool can be found at https://github.com/autokey/autokey/wiki and is a very useful tool for creating custom hotkeys and "hotstrings". Over my years as a Systems Administrator, I have compiled some of my personal commands into this tool. This repository is mostly designed to provide myself with a means of maintaining updates. However, I would be happy if it could be of use to some others. Please keep in mind that some were written years ago, and so likely are poor examples of good command line use. Also, as always, never run any command which you don't fully understand. I can't claim any responsibility for anything done with these commands.
